@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reserva de Asgard</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <header class="slide-down">
+      <div class="brand">
+        <div class="logo glow">
+          <img src="../imgs/logo+nombre_transparente.png" alt="Logo" class="logo">
+        </div>
+        <h1>Reserva de Asgard</h1>
+      </div>
+
+      <nav aria-label="Menú principal">
+        <a href="#">Inicio</a>
+        <a href="#about">Sobre</a>
+        <a href="#shop">Tienda</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero fade-up" aria-labelledby="hero-title">
+        <div class="intro">
+          <div class="eyebrow">Hidromiel artesana</div>
+          <h2 id="hero-title" class="title">Fine Nordic Mead</h2>
+          <p class="subtitle">El néctar de los dioses, elaborado con tradición, miel pura y sabores inspirados en la nobleza nórdica. Ideal para regalos, celebraciones y para quienes aprecian una bebida con historia.</p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary">Comprar ahora</button>
+            <button class="btn">Nuestra colección</button>
+          </div>
+        </div>
+
+        <aside class="hero-art" aria-label="Ilustración: guerrero nórdico y botella de hidromiel">
+          <div class="label">
+            <div class="bottle" aria-hidden="true">
+              <img src="../imgs/guerrero.png" alt="Guerrero nórdico y botella de hidromiel" class="bottle">
+            </div>
+            <div>
+              <h3>Edición Noble</h3>
+              <p>Botella de 750ml — madurada en barrica</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="shop" class="fade-up">
+        <h3 class="section-title">Nuestra colección</h3>
+        <div class="products">
+          <article class="card hover-glow" aria-labelledby="p1">
+            <div class="pimg" role="img" aria-label="Botella Original Mead">
+              <img src="../imgs/vino_prueba.png" alt="vino1" class="pimg">
+            </div>
+            <h4 id="p1">Original Mead</h4>
+            <div class="price">29€</div>
+            <button class="add" data-product="Original Mead">Añadir al carrito</button>
+          </article>
+
+          <article class="card hover-glow" aria-labelledby="p2">
+            <div class="pimg" role="img" aria-label="Botella Honey Brew">
+              <img src="../imgs/vino_prueba.png" alt="vino2" class="pimg">
+            </div>
+            <h4 id="p2">Honey Brew</h4>
+            <div class="price">29€</div>
+            <button class="add" data-product="Honey Brew">Añadir al carrito</button>
+          </article>
+
+          <article class="card hover-glow" aria-labelledby="p3">
+            <div class="pimg" role="img" aria-label="Botella Spiced Mead">
+              <img src="../imgs/vino_prueba.png" alt="vino3" class="pimg">
+            </div>
+            <h4 id="p3">Spiced Mead</h4>
+            <div class="price">29€</div>
+            <button class="add" data-product="Spiced Mead">Añadir al carrito</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="fade-up">
+        <h4 class="section-subtitle">Nuestra historia</h4>
+        <p>Noble Mead nace de recetas tradicionales, reinterpretadas para paladares modernos. Usamos mieles locales, levaduras seleccionadas y procesos lentos de fermentación para obtener un hidromiel equilibrado, con carácter y elegancia.</p>
+      </section>
+    </main>
+
+    <footer class="slide-up">
+      <div>© <strong>Noble Mead</strong> — 2025</div>
+      <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
+    </footer>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
