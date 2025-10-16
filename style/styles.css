@@ -98,6 +98,25 @@ nav a:hover {
   transform: translateY(-2px)
 }
 
+#icon {
+  height: 56px;
+  width: 56px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--muted), var(--amber-darkest));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) inset;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--paper);
+  cursor: pointer;
+}
+
+#icon img {
+  width: 95%;
+  height: 65%;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
