@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noble Mead — Hidromiel Nórdica</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">NM</div>
+      <h1>Noble Mead</h1>
+    </div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#about">Sobre</a>
+      <a href="#shop">Tienda</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Fine Nordic Mead</h2>
+      <p>El néctar de los dioses, elaborado con tradición y miel pura.</p>
+      <button id="buy-now">Comprar ahora</button>
+    </section>
+
+    <section id="shop">
+      <div class="product" data-name="Original Mead" data-price="29">Original Mead — 29€ <button class="add">Añadir</button></div>
+      <div class="product" data-name="Honey Brew" data-price="34">Honey Brew — 34€ <button class="add">Añadir</button></div>
+      <div class="product" data-name="Spiced Mead" data-price="39">Spiced Mead — 39€ <button class="add">Añadir</button></div>
+    </section>
+  </main>
+
+  <aside id="cart-panel">
+    <h3>Tu Carrito</h3>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: 0€</div>
+    <button id="clear-cart">Vaciar carrito</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
