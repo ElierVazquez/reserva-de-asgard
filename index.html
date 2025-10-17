@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/styles.css">
   <link rel="icon" href="imgs/logo_transparente.png" type="icon">
+  <link rel="script" href="js/script.js">
 </head>
 <body>
   <div class="container fade-in">
@@ -19,17 +20,28 @@
         </div>
         <h1>Reserva de Asgard</h1>
       </div>
-
-      <nav aria-label="Menú principal">
-        <a href="">Inicio</a>
-        <a href="src/aboutUs.html">Sobre</a>
-        <a href="src/productos.html">Tienda</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-      <div id="icon">
+      <div id="icon" class="glow">
         <img src="imgs/icono_menu.png" alt="Icono de menú">
       </div>
     </header>
+
+    <!-- Menú lateral oculto por defecto, ahora a la derecha -->
+    <aside id="sideMenu">
+        <div id="iconClose" class="glow">
+          <img src="imgs/icono_menu.png" alt="Icono de menú">
+        </div>
+        <a href="">Inicio</a>
+        <a href="src/productos.html">Tienda</a>
+        <a href="#contact">Contacto</a>
+        <a href="src/aboutUs.html">Sobre nosotros</a>
+    </aside>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof sideMenu === 'function') {
+          sideMenu();
+        }
+      });
+    </script>
 
     <main>
       <section class="hero fade-up" aria-labelledby="hero-title">
