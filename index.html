@@ -20,6 +20,9 @@
         </div>
         <h1>Reserva de Asgard</h1>
       </div>
+      <div id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
       <div id="icon" class="glow">
         <img src="imgs/icono_menu.png" alt="Icono de menú">
       </div>
@@ -72,31 +75,31 @@
       <section id="shop" class="fade-up">
         <h3 class="section-title">Nuestra colección</h3>
         <div class="products">
-          <article class="card hover-glow" aria-labelledby="p1">
+          <article class="card hover-glow" aria-labelledby="p1" class="product" data-name="Original Mead" data-price="29">
             <div class="pimg" role="img" aria-label="Botella Original Mead">
               <img src="imgs/vino_prueba.png" alt="vino1" class="pimg">
             </div>
             <h4 id="p1">Original Mead</h4>
             <div class="price">29€</div>
-            <button class="add" data-product="Original Mead">Añadir al carrito</button>
+            <button id="buy-now" class="add" data-product="Original Mead">Añadir al carrito</button>
           </article>
 
-          <article class="card hover-glow" aria-labelledby="p2">
+          <article class="card hover-glow" aria-labelledby="p2" class="product" data-name="Honey Brew" data-price="29">
             <div class="pimg" role="img" aria-label="Botella Honey Brew">
               <img src="imgs/vino_prueba.png" alt="vino2" class="pimg">
             </div>
             <h4 id="p2">Honey Brew</h4>
             <div class="price">29€</div>
-            <button class="add" data-product="Honey Brew">Añadir al carrito</button>
+            <button id="buy-now" class="add" data-product="Honey Brew">Añadir al carrito</button>
           </article>
 
-          <article class="card hover-glow" aria-labelledby="p3">
+          <article class="card hover-glow" aria-labelledby="p3" class="product" data-name="Spiced Mead" data-price="29">
             <div class="pimg" role="img" aria-label="Botella Spiced Mead">
               <img src="imgs/vino_prueba.png" alt="vino3" class="pimg">
             </div>
             <h4 id="p3">Spiced Mead</h4>
             <div class="price">29€</div>
-            <button class="add" data-product="Spiced Mead">Añadir al carrito</button>
+            <button id="buy-now" class="add" data-product="Spiced Mead">Añadir al carrito</button>
           </article>
         </div>
       </section>
@@ -107,6 +110,13 @@
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
   </div>
+
+  <aside id="cart-panel">
+    <h3>Tu Carrito</h3>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: 0€</div>
+    <button id="clear-cart">Vaciar carrito</button>
+  </aside>
 
   <script src="js/script.js"></script>
 </body>
