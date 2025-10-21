@@ -1,8 +1,8 @@
 // Menú lateral
 function sideMenu() {
-    const menuBtn = document.getElementById('icon');
+    const menuBtn = document.getElementById('menu-icon');
     const sideMenu = document.getElementById('sideMenu');
-    const closeMenuBtn = document.getElementById('iconClose');
+    const closeMenuBtn = document.getElementById('iconMenuClose');
 
     function toggleMenu() {
         if (sideMenu.style.right === '0px') {
@@ -26,6 +26,7 @@ const cartTotal = document.getElementById('cart-total');
 const cartCount = document.getElementById('cart-count');
 const clearCartBtn = document.getElementById('clear-cart');
 const buyNowBtn = document.getElementById('buy-now');
+const closeCartBtn = document.getElementById('iconCartClose');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartDisplay() {
@@ -68,6 +69,13 @@ cartIcon.addEventListener('click', () => {
 
 buyNowBtn.addEventListener('click', () => {
   cartPanel.classList.add('open');
+  setTimeout(() => {
+    cartPanel.classList.remove('open');
+  }, 2000);
+});
+
+closeCartBtn.addEventListener('click', () => {
+  cartPanel.classList.remove('open');
 });
 
 updateCartDisplay();

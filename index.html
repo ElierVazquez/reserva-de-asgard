@@ -20,18 +20,20 @@
         </div>
         <h1>Reserva de Asgard</h1>
       </div>
-      <div id="cart-icon">
-        🛒 <span id="cart-count">0</span>
-      </div>
-      <div id="icon" class="glow">
-        <img src="imgs/icono_menu.png" alt="Icono de menú">
+      <div id="buttons">
+        <div id="cart-icon" class="glow">
+          🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="menu-icon" class="glow">
+          <img src="imgs/icono_menu.png" alt="Icono de menú">
+        </div>
       </div>
     </header>
 
     <!-- Menú lateral oculto por defecto, ahora a la derecha -->
     <aside id="sideMenu" class="glow">
-        <div id="iconClose" class="glow">
-          <img src="imgs/icono_menu.png" alt="Icono de menú">
+        <div id="iconMenuClose" class="glow">
+          <img src="imgs/x_menus.png" alt="Icono de menú">
         </div>
         <a href="">Inicio</a>
         <a href="src/productos.html">Tienda</a>
@@ -112,10 +114,16 @@
   </div>
 
   <aside id="cart-panel">
-    <h3>Tu Carrito</h3>
+    <div id="top_cart">
+      <h3>Tu Carrito</h3>
+      <div id="iconCartClose" class="glow">
+        <img src="imgs/x_menus.png" alt="Icono de menú">
+      </div>
+    </div>
     <div id="cart-items"></div>
     <div id="cart-total">Total: 0€</div>
     <button id="clear-cart">Vaciar carrito</button>
+    <button id="buy-now">Comprar ahora</button>
   </aside>
 
   <script src="js/script.js"></script>
