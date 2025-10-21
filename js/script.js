@@ -25,7 +25,7 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const cartCount = document.getElementById('cart-count');
 const clearCartBtn = document.getElementById('clear-cart');
-const buyNowBtn = document.getElementById('buy-now');
+const addCartBtn = document.getElementById('add-cart');
 const closeCartBtn = document.getElementById('iconCartClose');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -67,8 +67,8 @@ cartIcon.addEventListener('click', () => {
   cartPanel.classList.toggle('open');
 });
 
-buyNowBtn.addEventListener('click', () => {
-  cartPanel.classList.add('open');
+addCartBtn.addEventListener('click', () => {
+  cartPanel.classList.toggle('open');
   setTimeout(() => {
     cartPanel.classList.remove('open');
   }, 2000);
