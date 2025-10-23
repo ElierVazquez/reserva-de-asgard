@@ -42,8 +42,6 @@ function getCookie(nombre) {
 
 let cart = JSON.parse(getCookie('cart') || []);
 
-updateCartDisplay();
-
 function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';
   let total = 0;
@@ -87,6 +85,7 @@ document.querySelectorAll('.add').forEach(btn => {
 
 clearCartBtn.addEventListener('click', () => {
   cart = [];
+  document.cookie = "cart=" + JSON.stringify(cart);
   updateCartDisplay();
 });
 
