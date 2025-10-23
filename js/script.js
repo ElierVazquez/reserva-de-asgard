@@ -1,22 +1,20 @@
 // Menú lateral
-function sideMenu() {
-    const menuBtn = document.getElementById('menu-icon');
-    const sideMenu = document.getElementById('sideMenu');
-    const closeMenuBtn = document.getElementById('iconMenuClose');
+const menuBtn = document.getElementById('menu-icon');
+const sideMenu = document.getElementById('sideMenu');
+const closeMenuBtn = document.getElementById('iconMenuClose');
 
-    function toggleMenu() {
-        if (sideMenu.style.right === '0px') {
-            sideMenu.style.right = '-250px';
-            sideMenu.style.visibility = 'hidden';
-        } else {
-            sideMenu.style.right = '0px';
-            sideMenu.style.visibility = 'visible';
-        }
+function toggleMenu() {
+    if (sideMenu.style.right === '0px') {
+        sideMenu.style.right = '-250px';
+        sideMenu.style.visibility = 'hidden';
+    } else {
+        sideMenu.style.right = '0px';
+        sideMenu.style.visibility = 'visible';
     }
-
-    menuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
 }
+
+menuBtn.addEventListener('click', toggleMenu);
+closeMenuBtn.addEventListener('click', toggleMenu);
 
 // Carrito
 const cartIcon = document.getElementById('cart-icon');
@@ -43,6 +41,8 @@ function getCookie(nombre) {
 }
 
 let cart = JSON.parse(getCookie('cart') || []);
+
+updateCartDisplay();
 
 function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';
@@ -90,15 +90,17 @@ clearCartBtn.addEventListener('click', () => {
   updateCartDisplay();
 });
 
-addCartBtn.addEventListener('click', () => {
-  var auxBtnContent = addCartBtn.textContent;
-
-  addCartBtn.textContent = '¡Añadido al carrito!';
-  addCartBtn.classList.add('glow')
-  setTimeout(() => {
-    addCartBtn.textContent = auxBtnContent;
-    addCartBtn.classList.remove('glow');
-  }, 2000);
-});
-
 updateCartDisplay();
+
+if (addCartBtn !== null) {
+  addCartBtn.addEventListener('click', () => {
+    var auxBtnContent = addCartBtn.textContent;
+
+    addCartBtn.textContent = '¡Añadido al carrito!';
+    addCartBtn.classList.add('glow')
+    setTimeout(() => {
+      addCartBtn.textContent = auxBtnContent;
+      addCartBtn.classList.remove('glow');
+    }, 2000);
+  });
+}
