@@ -37,7 +37,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px
+  margin-bottom: 28px;
 }
 
 .brand {
@@ -104,6 +104,13 @@ header {
 #sideMenu a {
   margin: 1rem 0;
   text-decoration: none;
+  color: var(--cream);
+}
+
+#sideMenu a:hover {
+  transform: translateY(-3px);
+  color: var(--gold);
+  transition: var(--transition);
 }
 
 #buttons {
@@ -123,6 +130,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#add-cart {
+  transition: var(--transition);
 }
 
 #cart-icon {
@@ -296,7 +307,7 @@ header {
 }
 
 .hero-art {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35)) /*, url('../imgs/guerrero.png') */;
+  background: linear-gradient(180deg, #00000026, #00000059) /*, url('../imgs/guerrero.png') */;
   background-size: cover;
   background-position: center;
   height: 420px;
@@ -424,6 +435,11 @@ footer {
 
   .title {
     font-size: 42px
+  }
+
+  .hover-glow:ho {
+    box-shadow: 0 0 20px rgba(200, 169, 110, 0.6);
+    transform: translateY(-4px);
   }
 }
 

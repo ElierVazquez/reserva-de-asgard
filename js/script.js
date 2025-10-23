@@ -27,7 +27,22 @@ const cartCount = document.getElementById('cart-count');
 const clearCartBtn = document.getElementById('clear-cart');
 const addCartBtn = document.getElementById('add-cart');
 const closeCartBtn = document.getElementById('iconCartClose');
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function getCookie(nombre) {
+  const cookies = document.cookie.split(';'); // Separa todas las cookies en un array
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i].trim(); // Elimina los espacios en blanco al inicio
+    // Busca si el nombre de la cookie coincide
+    if (cookie.startsWith(nombre + '=')) {
+      // Devuelve el valor de la cookie
+      return cookie.substring(nombre.length + 1);
+    }
+  }
+  // Devuelve nada si no se encuentra la cookie
+  return "";
+}
+
+let cart = JSON.parse(getCookie('cart') || []);
 
 function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';
@@ -41,7 +56,19 @@ function updateCartDisplay() {
   cartTotal.textContent = `Total: ${total}€`;
   cartCount.textContent = cart.length;
   localStorage.setItem('cart', JSON.stringify(cart));
+  document.cookie = "cart=" + JSON.stringify(cart) + "; path=/;";
 }
+
+function openCart() {
+  if (cartPanel.classList.contains('open')) {
+      cartPanel.classList.remove('open');
+  } else {
+      cartPanel.classList.add('open');
+  }
+}
+
+cartIcon.addEventListener('click', openCart);
+closeCartBtn.addEventListener('click', openCart);
 
 function removeItem(index) {
   cart.splice(index, 1);
@@ -63,19 +90,15 @@ clearCartBtn.addEventListener('click', () => {
   updateCartDisplay();
 });
 
-cartIcon.addEventListener('click', () => {
-  cartPanel.classList.toggle('open');
-});
-
 addCartBtn.addEventListener('click', () => {
-  cartPanel.classList.toggle('open');
-  setTimeout(() => {
-    cartPanel.classList.remove('open');
-  }, 2000);
-});
+  var auxBtnContent = addCartBtn.textContent;
 
-closeCartBtn.addEventListener('click', () => {
-  cartPanel.classList.remove('open');
+  addCartBtn.textContent = '¡Añadido al carrito!';
+  addCartBtn.classList.add('glow')
+  setTimeout(() => {
+    addCartBtn.textContent = auxBtnContent;
+    addCartBtn.classList.remove('glow');
+  }, 2000);
 });
 
 updateCartDisplay();

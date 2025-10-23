@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" href="imgs/logo_transparente.png" type="icon">
+    <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
+    <link rel="script" href="../js/script.js">
 </head>
 <body>
   <div class="container fade-in">
@@ -18,14 +19,54 @@
         </div>
         <h1>Reserva de Asgard</h1>
       </div>
-
-      <nav aria-label="Menú principal">
-        <a href="..">Inicio</a>
-        <a href="">Sobre</a>
-        <a href="productos.html">Tienda</a>
-        <a href="#contact">Contacto</a>
-      </nav>
+      <div id="buttons">
+        <div id="cart-icon" class="glow">
+          🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="menu-icon" class="glow">
+          <img src="../imgs/icono_menu.png" alt="Icono de menú">
+        </div>
+      </div>
     </header>
+
+    <!-- Menú lateral de navegación -->
+    <aside id="sideMenu" class="glow">
+        <div id="iconMenuClose" class="glow">
+          <img src="../imgs/x_menus.png" alt="Icono de menú">
+        </div>
+        <a href="../index.html">Inicio</a>
+        <a href="../src/productos.html">Tienda</a>
+        <a href="#contact">Contacto</a>
+        <a href="../src/aboutUs.html">Sobre nosotros</a>
+    </aside>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof sideMenu === 'function') {
+          sideMenu();
+        }
+      });
+    </script>
+
+    <!-- Menú lateral de compra -->
+    <aside id="cart-panel" class="glow">
+      <div id="top_cart">
+        <h3>Tu Carrito</h3>
+        <div id="iconCartClose" class="glow">
+          <img src="../imgs/x_menus.png" alt="Icono de menú">
+        </div>
+      </div>
+      <div id="cart-items"></div>
+      <div id="cart-total">Total: 0€</div>
+      <button id="clear-cart">Vaciar carrito</button>
+      <button id="buy-now">Comprar ahora</button>
+    </aside>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof cart-panel === 'function') {
+          openCart();
+        }
+      });
+    </script>
 
     <main>
       <section class="about_us fade-up">
