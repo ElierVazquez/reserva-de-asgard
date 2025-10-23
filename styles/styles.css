@@ -239,8 +239,13 @@ header {
   margin-bottom: 32px;
 }
 
-.hero .intro {
-  padding-right: 12px
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .eyebrow {
@@ -276,30 +281,20 @@ header {
   opacity: 0.95
 }
 
-.cta-row {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: 18px
-}
-
 .btn {
-  background: transparent;
-  border: 2px solid rgba(200, 169, 110, 0.12);
-  color: var(--cream);
+  background: linear-gradient(180deg, var(--gold), #b48d52);
+  box-shadow: 0 8px 30px rgba(180, 141, 82, 0.12);
+  border: 2px solid var(--bg);
+  color: var(--bg);
+  text-align: center;
+  text-decoration: none;
   padding: 12px 18px;
   border-radius: var(--radius);
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
-  backdrop-filter: blur(4px)
-}
-
-.btn-primary {
-  background: linear-gradient(180deg, var(--gold), #b48d52);
-  color: var(--paper);
-  border: none;
-  box-shadow: 0 8px 30px rgba(180, 141, 82, 0.12)
+  max-width: 200px;
+  backdrop-filter: blur(4px);
 }
 
 .btn:hover {

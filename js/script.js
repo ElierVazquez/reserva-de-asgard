@@ -54,7 +54,7 @@ function updateCartDisplay() {
   cartTotal.textContent = `Total: ${total}€`;
   cartCount.textContent = cart.length;
   localStorage.setItem('cart', JSON.stringify(cart));
-  document.cookie = "cart=" + JSON.stringify(cart) + "; path=/;";
+  document.cookie = "cart=" + JSON.stringify(cart) + "; max-age=" + 604800; // expira en 7 días
 }
 
 function openCart() {
