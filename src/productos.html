@@ -1,63 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Reserva de Asgard - Productos</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reserva de Asgard - Productos</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
 </head>
 <body>
-    <div class="container fade-in">
-    <header class="slide-down">
-      <div class="brand">
-        <div class="logo glow">
-          <img src="../imgs/logo_transparente.png" alt="Logo">
-        </div>
-        <h1>Reserva de Asgard</h1>
+  <header class="slide-down">
+    <div class="brand">
+      <div class="logo glow">
+        <img src="../imgs/logo_transparente.png" alt="Logo">
       </div>
-      <div id="buttons">
-        <div id="cart-icon" class="glow">
-          🛒 <span id="cart-count">0</span>
-        </div>
-        <div id="menu-icon" class="glow">
-          <img src="../imgs/icono_menu.png" alt="Icono de menú">
-        </div>
+      <h1>Reserva de Asgard</h1>
+    </div>
+    <div id="buttons">
+      <div id="cart-icon" class="glow">
+        🛒 <span id="cart-count">0</span>
       </div>
-    </header>
-
-    <!-- Menú lateral de navegación -->
-    <aside id="sideMenu" class="glow">
-        <div id="iconMenuClose" class="glow">
-          <img src="../imgs/x_menus.png" alt="Icono de menú">
-        </div>
-        <a href="../index.html">Inicio</a>
-        <a href="../src/productos.html">Tienda</a>
-        <a href="#contact">Contacto</a>
-        <a href="../src/aboutUs.html">Sobre nosotros</a>
-    </aside>
-
-    <!-- Menú lateral de compra -->
-    <aside id="cart-panel" class="glow">
-      <div id="top_cart">
-        <h3>Tu Carrito</h3>
-        <div id="iconCartClose" class="glow">
-          <img src="../imgs/x_menus.png" alt="Icono de menú">
-        </div>
+      <div id="menu-icon" class="glow">
+        <img src="../imgs/icono_menu.png" alt="Icono de menú">
       </div>
-      <div id="cart-items"></div>
-      <div id="cart-total">Total: 0€</div>
-      <button id="clear-cart">Vaciar carrito</button>
-      <button id="buy-now">Comprar ahora</button>
-    </aside>
+    </div>
+  </header>
 
+  <div class="container fade-in">
     <main>
       <section id="shop" class="fade-up">
         <h3 class="section-title">Nuestra colección</h3>
         <div class="products">
-          <article class="card hover-glow" aria-labelledby="p1" class="product" data-name="Original Mead" data-price="29">
+          <article class="card hover-glow" aria-labelledby="p1" class="product" data-name="Original Mead"
+            data-price="29">
             <div class="pimg" role="img" aria-label="Botella Original Mead">
               <img src="../imgs/vino_prueba.png" alt="vino1" class="pimg">
             </div>
@@ -92,6 +70,30 @@
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
   </div>
+  <!-- Menú lateral de navegación -->
+  <aside id="sideMenu" class="glow">
+    <div id="iconMenuClose" class="glow">
+      <img src="../imgs/x_menus.png" alt="Icono de menú">
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a href="../src/productos.html">Tienda</a>
+    <a href="#contact">Contacto</a>
+    <a href="../src/aboutUs.html">Sobre nosotros</a>
+  </aside>
+
+  <!-- Menú lateral de compra -->
+  <aside id="cart-panel" class="glow">
+    <div id="top_cart">
+      <h3>Tu Carrito</h3>
+      <div id="iconCartClose" class="glow">
+        <img src="../imgs/x_menus.png" alt="Icono de menú">
+      </div>
+    </div>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: 0€</div>
+    <button id="clear-cart">Vaciar carrito</button>
+    <button id="buy-now">Comprar ahora</button>
+  </aside>
   <script src="../js/sideMenuScript.js"></script>
 </body>
 </html>

@@ -1,63 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Reserva de Asgard - Sobre nosotros</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reserva de Asgard - Sobre nosotros</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
 </head>
 <body>
+  <header class="slide-down">
+    <div class="brand">
+      <div class="logo glow">
+        <img src="../imgs/logo_transparente.png" alt="Logo">
+      </div>
+      <h1>Reserva de Asgard</h1>
+    </div>
+    <div id="buttons">
+      <div id="cart-icon" class="glow">
+        🛒 <span id="cart-count">0</span>
+      </div>
+      <div id="menu-icon" class="glow">
+        <img src="../imgs/icono_menu.png" alt="Icono de menú">
+      </div>
+    </div>
+  </header>
   <div class="container fade-in">
-    <header class="slide-down">
-      <div class="brand">
-        <div class="logo glow">
-          <img src="../imgs/logo_transparente.png" alt="Logo">
-        </div>
-        <h1>Reserva de Asgard</h1>
-      </div>
-      <div id="buttons">
-        <div id="cart-icon" class="glow">
-          🛒 <span id="cart-count">0</span>
-        </div>
-        <div id="menu-icon" class="glow">
-          <img src="../imgs/icono_menu.png" alt="Icono de menú">
-        </div>
-      </div>
-    </header>
-
-    <!-- Menú lateral de navegación -->
-    <aside id="sideMenu" class="glow">
-        <div id="iconMenuClose" class="glow">
-          <img src="../imgs/x_menus.png" alt="Icono de menú">
-        </div>
-        <a href="../index.html">Inicio</a>
-        <a href="../src/productos.html">Tienda</a>
-        <a href="#contact">Contacto</a>
-        <a href="../src/aboutUs.html">Sobre nosotros</a>
-    </aside>
-
-    <!-- Menú lateral de compra -->
-    <aside id="cart-panel" class="glow">
-      <div id="top_cart">
-        <h3>Tu Carrito</h3>
-        <div id="iconCartClose" class="glow">
-          <img src="../imgs/x_menus.png" alt="Icono de menú">
-        </div>
-      </div>
-      <div id="cart-items"></div>
-      <div id="cart-total">Total: 0€</div>
-      <button id="clear-cart">Vaciar carrito</button>
-      <button id="buy-now">Comprar ahora</button>
-    </aside>
-
     <main>
       <section class="about_us fade-up">
         <div>
           <h2 class="title">Nuestra história</h2>
-          <p class="subtitle">Noble Mead nace de recetas tradicionales, reinterpretadas para paladares modernos. Usamos mieles locales, levaduras seleccionadas y procesos lentos de fermentación para obtener un hidromiel equilibrado, con carácter y elegancia.</p>
+          <p class="subtitle">Noble Mead nace de recetas tradicionales, reinterpretadas para paladares modernos. Usamos
+            mieles locales, levaduras seleccionadas y procesos lentos de fermentación para obtener un hidromiel
+            equilibrado, con carácter y elegancia.</p>
         </div>
       </section>
     </main>
@@ -67,6 +45,30 @@
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
   </div>
+  <!-- Menú lateral de navegación -->
+  <aside id="sideMenu" class="glow">
+    <div id="iconMenuClose" class="glow">
+      <img src="../imgs/x_menus.png" alt="Icono de menú">
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a href="../src/productos.html">Tienda</a>
+    <a href="#contact">Contacto</a>
+    <a href="../src/aboutUs.html">Sobre nosotros</a>
+  </aside>
+
+  <!-- Menú lateral de compra -->
+  <aside id="cart-panel" class="glow">
+    <div id="top_cart">
+      <h3>Tu Carrito</h3>
+      <div id="iconCartClose" class="glow">
+        <img src="../imgs/x_menus.png" alt="Icono de menú">
+      </div>
+    </div>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: 0€</div>
+    <button id="clear-cart">Vaciar carrito</button>
+    <button id="buy-now">Comprar ahora</button>
+  </aside>
   <script src="../js/sideMenuScript.js"></script>
 </body>
 </html>
