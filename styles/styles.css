@@ -442,6 +442,10 @@ footer {
     font-size: 20px
   }
 
+  #buttons {
+    gap: 12px
+  }
+
   .hero {
     grid-template-columns: 1fr
   }
@@ -453,6 +457,10 @@ footer {
   .title {
     font-size: 42px
   }
+
+  footer {
+    font-size: 12px;
+  }
 }
 
 @media (max-width:640px) {
@@ -460,8 +468,24 @@ footer {
     font-size: 14px
   }
 
+  #buttons {
+    gap: 15px
+  }
+
+  header {
+    top: 0;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
   body {
     padding: 20px
+  }
+
+  footer {
+    font-size: 12px;
   }
 
   .products {
@@ -477,15 +501,9 @@ footer {
   }
 }
 
-.container {
-  /* max-width: var(--max-width); */
-  width: 100%;
-}
-
 header,
 footer,
-.hero,
-.products,
+main,
 #about {
   transition: all var(--transition);
 }
