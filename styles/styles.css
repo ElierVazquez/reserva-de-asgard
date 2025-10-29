@@ -112,6 +112,9 @@ main {
   transition: right var(--transition);
   border-radius: var(--radius) 0 0 var(--radius);
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #sideMenu a {
@@ -172,7 +175,10 @@ main {
   justify-content: space-between;
 }
 
-#cart-items div {
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--gold);
   padding: 0.5rem 0;
 }
