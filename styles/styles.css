@@ -40,7 +40,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,7 +177,7 @@ main {
 
 #cart-items {
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 1rem;
 }
 
@@ -186,7 +186,7 @@ main {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--gold);
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5vw;
 }
 
 #cart-total {
@@ -260,7 +260,7 @@ main {
   background: linear-gradient(180deg, #ffffff05, transparent);
   padding: 34px;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   margin-bottom: 32px;
 }
 
@@ -286,7 +286,7 @@ main {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
   padding: 34px;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   margin-bottom: 32px
 }
 
@@ -428,6 +428,7 @@ footer {
   border-radius: var(--radius) var(--radius) 0 0;
   width: 100%;
   background: linear-gradient(180deg, var(--bg) 10%, #211610 90%);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   padding: 20px;
   z-index: 10;
 }
