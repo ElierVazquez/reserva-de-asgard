@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reserva de Asgard - Sobre nosotros</title>
+  <title>Reserva de Asgard</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="imgs/logo_transparente.png" type="icon">
 </head>
 <body>
   <header class="slide-down">
     <div class="brand">
       <div class="logo glow">
-        <img src="../imgs/logo_transparente.png" alt="Logo">
+        <img src="imgs/logo_transparente.png" alt="Logo">
       </div>
       <h1>Reserva de Asgard</h1>
     </div>
@@ -24,19 +24,33 @@
         🛒 <span id="cart-count">0</span>
       </div>
       <div id="menu-icon" class="glow">
-        <img src="../imgs/icono_menu.png" alt="Icono de menú">
+        <img src="imgs/icono_menu.png" alt="Icono de menú">
       </div>
     </div>
   </header>
   <div class="container fade-in">
     <main>
-      <section class="about_us fade-up">
-        <div>
-          <h2 class="title">Nuestra história</h2>
-          <p class="subtitle">Noble Mead nace de recetas tradicionales, reinterpretadas para paladares modernos. Usamos
-            mieles locales, levaduras seleccionadas y procesos lentos de fermentación para obtener un hidromiel
-            equilibrado, con carácter y elegancia.</p>
+      <section class="hero fade-up" aria-labelledby="hero-title">
+        <div class="intro">
+          <div class="eyebrow">Hidromiel artesana</div>
+          <h2 id="hero-title" class="title">Fine Nordic Mead</h2>
+          <p class="subtitle">El néctar de los dioses, elaborado con tradición, miel pura y sabores inspirados en la
+            nobleza nórdica. Ideal para regalos, celebraciones y para quienes aprecian una bebida con historia.</p>
+
+          <a class="btn" href="src/productos.html#p2">Comprar ahora</a>
         </div>
+
+        <aside class="hero-art" aria-label="Ilustración: guerrero nórdico y botella de hidromiel">
+          <div class="label">
+            <div class="bottle" aria-hidden="true">
+              <img src="../imgs/guerrero.png" alt="Guerrero nórdico y botella de hidromiel" class="bottle">
+            </div>
+            <div>
+              <h3>Edición Noble</h3>
+              <p>Botella de 750ml — madurada en barrica</p>
+            </div>
+          </div>
+        </aside>
       </section>
     </main>
 
@@ -50,12 +64,11 @@
     <div id="iconMenuClose" class="glow">
       <img src="../imgs/x_menus.png" alt="Icono de menú">
     </div>
-    <a href="../index.html">Inicio</a>
-    <a href="../src/productos.html">Tienda</a>
+    <a href="">Inicio</a>
+    <a href="productos.html">Tienda</a>
     <a href="#contact">Contacto</a>
-    <a href="../src/aboutUs.html">Sobre nosotros</a>
+    <a href="nosotros.html">Sobre nosotros</a>
   </aside>
-
   <!-- Menú lateral de compra -->
   <aside id="cart-panel" class="glow">
     <div id="top_cart">
