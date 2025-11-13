@@ -3,7 +3,6 @@
   var HIDE_DELAY_MS = 1000; // after adding hide class, wait before removing from DOM
   var KILL_TIMEOUT_MS = 10000; // safety: hide even if 'load' never fires
 
-  
   function hidePreloader() {
     var el = document.getElementById('preloader');
     if (!el) return;
