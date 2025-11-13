@@ -592,3 +592,43 @@ main,
     opacity: 1;
   }
 }
+
+/* Preloader (logo palpitando) */
+#preloader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--bg) 0%, #211610 100%);
+  z-index: 3000;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+#preloader.preloader--hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.preloader__img {
+  width: min(72vw, 420px);
+  height: auto;
+  animation: preloaderPulse 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.45));
+}
+
+@keyframes preloaderPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
