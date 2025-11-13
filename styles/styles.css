@@ -301,7 +301,6 @@ main {
 .subtitle {
   margin: 0 0 20px 0;
   color: var(--cream);
-  /* max-width: 60ch; */
   font-size: 18px;
   opacity: 0.95
 }
@@ -522,26 +521,6 @@ main,
 }
 
 /* Animaciones */
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-  opacity: 0;
-}
-
-.fade-up {
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-}
-
-.slide-down {
-  animation: slideDown 1s ease forwards;
-  opacity: 0;
-}
-
-.slide-up {
-  animation: slideUp 1s ease forwards;
-  opacity: 0;
-}
-
 .glow {
   box-shadow: 0 0 12px rgba(200, 169, 110, 0.4), inset 0 0 20px rgba(200, 169, 110, 0.2);
 }
@@ -549,48 +528,6 @@ main,
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(200, 169, 110, 0.6);
   transform: translateY(-4px);
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* Preloader (logo palpitando) */
