@@ -8,11 +8,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="imgs/logo_transparente.png" type="icon">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
 </head>
 <body>
-  <header class="slide-down">
+  <div id="preloader" aria-live="polite" aria-busy="true">
+    <img class="preloader__img" src="../imgs/logo+nombre_transparente.png" alt="Reserva de Asgard">
+  </div>
+  <header>
     <div class="brand">
       <div class="logo glow">
         <img src="imgs/logo_transparente.png" alt="Logo">
@@ -28,9 +31,9 @@
       </div>
     </div>
   </header>
-  <div class="container fade-in">
+  <div class="container">
     <main>
-      <section class="hero fade-up" aria-labelledby="hero-title">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="intro">
           <div class="eyebrow">Hidromiel artesana</div>
           <h2 id="hero-title" class="title">Fine Nordic Mead</h2>
@@ -41,7 +44,7 @@
         </div>
 
         <aside class="hero-art" aria-label="Ilustración: guerrero nórdico y botella de hidromiel">
-          <div class="label">
+          <div>
             <div class="bottle" aria-hidden="true">
               <img src="../imgs/guerrero.png" alt="Guerrero nórdico y botella de hidromiel" class="bottle">
             </div>
@@ -54,7 +57,7 @@
       </section>
     </main>
 
-    <footer class="slide-up">
+    <footer>
       <div>© <strong>Reserva de Asgard</strong> — 2025</div>
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
@@ -85,6 +88,7 @@
     </div>
   </aside>
   <script src="../js/sideMenuScript.js"></script>
+  <script src="../js/preloader.js"></script>
   <script src="../js/cartScript.js"></script>
 </body>
 </html>

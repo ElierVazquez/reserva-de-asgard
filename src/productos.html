@@ -12,7 +12,10 @@
   <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
 </head>
 <body>
-  <header class="slide-down">
+  <div id="preloader" aria-live="polite" aria-busy="true">
+    <img class="preloader__img" src="../imgs/logo+nombre_transparente.png" alt="Reserva de Asgard">
+  </div>
+  <header>
     <div class="brand">
       <div class="logo glow">
         <img src="../imgs/logo_transparente.png" alt="Logo">
@@ -29,43 +32,45 @@
     </div>
   </header>
 
-  <div class="container fade-in">
+  <div class="container">
     <main>
-      <section id="shop" class="fade-up">
+      <section id="shop">
         <h3 class="section-title">Nuestra colección</h3>
         <div class="products">
-          <article class="card hover-glow" aria-labelledby="p1" class="product" data-name="Hidromiel Tradicional"
-            data-price="8">
+          <article id="p1" class="card product" aria-labelledby="p1" data-name="Hidromiel Tradicional" data-price="8">
             <h4 id="p1">Hidromiel Tradicional</h4>
             <div class="pimg" role="img" aria-label="Botella Hidromiel Tradicional">
               <img src="../imgs/vino_prueba.png" alt="vino1" class="pimg">
             </div>
             <div class="price">8€</div>
             <button id="add-cart" class="add" data-product="Hidromiel Tradicional">Añadir al carrito</button>
+            <button href="fichaProducto.html" class="info">Más información</button>
           </article>
 
-          <article class="card hover-glow" aria-labelledby="p2" class="product" data-name="Hidromiel Noble" data-price="10">
+          <article id="p2" class="card product" aria-labelledby="p2" data-name="Hidromiel Noble" data-price="10">
             <h4 id="p2">Hidromiel Noble</h4>
             <div class="pimg" role="img" aria-label="Botella Hidromiel Noble">
               <img src="../imgs/vino_prueba.png" alt="vino2" class="pimg">
             </div>
             <div class="price">10€</div>
             <button id="add-cart" class="add" data-product="Hidromiel Noble">Añadir al carrito</button>
+            <button href="fichaProducto.html" class="info">Más información</button>
           </article>
 
-          <article class="card hover-glow" aria-labelledby="p3" class="product" data-name="Hidromiel Sangre de Dragón" data-price="12">
+          <article id="p3" class="card product" aria-labelledby="p3" data-name="Hidromiel Sangre de Dragón" data-price="12">
             <h4 id="p3">Hidromiel Sangre de Dragón</h4>
             <div class="pimg" role="img" aria-label="Botella Hidromiel Sangre de Dragón">
               <img src="../imgs/vino_prueba.png" alt="vino3" class="pimg">
             </div>
             <div class="price">12€</div>
             <button id="add-cart" class="add" data-product="Hidromiel Sangre de Dragón">Añadir al carrito</button>
+            <button href="fichaProducto.html" class="info">Más información</button>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="slide-up">
+    <footer>
       <div>© <strong>Reserva de Asgard</strong> — 2025</div>
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
@@ -97,6 +102,7 @@
     </div>
   </aside>
   <script src="../js/sideMenuScript.js"></script>
+  <script src="../js/preloader.js"></script>
   <script src="../js/cartScript.js"></script>
 </body>
 </html>
