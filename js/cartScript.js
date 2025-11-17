@@ -34,7 +34,6 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const cartCount = document.getElementById('cart-count');
 const clearCartBtn = document.getElementById('clear-cart');
-const addCartBtn = document.getElementById('add-cart');
 const closeCartBtn = document.getElementById('iconCartClose');
 
 /* ---------------- Inicializar carrito (cookie -> localStorage -> vacío) ---------------- */
@@ -164,7 +163,7 @@ if (cartItemsContainer) {
 */
 document.querySelectorAll('.add').forEach(btn => {
   btn.addEventListener('click', () => {
-    const product = btn.closest('[data-name][data-price]') || btn.parentElement;
+    const product = document.getElementById(btn.parentElement.id) || btn.parentElement;
     const name = product?.dataset?.name || product?.getAttribute('data-name') || 'Producto';
     const priceRaw = product?.dataset?.price || product?.getAttribute('data-price') || '0';
     const price = parseFloat(priceRaw.toString().replace(',', '.')) || 0;
@@ -172,11 +171,11 @@ document.querySelectorAll('.add').forEach(btn => {
     cart.push({ name: String(name), price: Number(price) });
     updateCartDisplay();
 
-    // animación botón "añadido" si existe addCartBtn (id='add-cart') o btn mismo
-    const btnToAnimate = addCartBtn || btn;
+    // animación botón "añadido" si existe btn
+    const btnToAnimate = btn;
     if (btnToAnimate) {
       const originalText = btnToAnimate.textContent;
-      btnToAnimate.textContent = '¡Añadido al carrito!';
+      btnToAnimate.textContent = '¡Añadido!';
       btnToAnimate.classList?.add('glow');
       setTimeout(() => {
         btnToAnimate.textContent = originalText;
