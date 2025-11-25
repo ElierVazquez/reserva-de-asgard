@@ -168,6 +168,32 @@ main {
   width: 56px;
 }
 
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, var(--muted), var(--amber-darkest));
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
+  height: 56px;
+  width: 56px;
+}
+
+#link_login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo_login {
+  width: 100%;
+  height: 100%;
+}
+
 #cart-panel.open {
   right: 0;
 }
@@ -239,6 +265,10 @@ main {
 }
 
 #iconCartClose:hover {
+  transform: translateY(-3px)
+}
+
+#login:hover {
   transform: translateY(-3px)
 }
 
