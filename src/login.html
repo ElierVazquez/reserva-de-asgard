@@ -17,14 +17,13 @@
   </div>
 
   <div class="container">
-    <header>
-      <img src="../imgs/logo+nombre_transparente.png" alt="Logo" id="logo_img">
-    </header>
-
     <main>
-      <section id="login_section">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi voluptate quis sed veritatis unde dolor delectus atque placeat a, cum quasi doloremque nisi cumque suscipit minima recusandae autem ea soluta dicta qui! Recusandae beatae enim optio? Eum nulla sunt aliquid, rerum odio, repellendus deleniti ad velit molestias doloremque totam.
-      </section>
+      <form id="login_section" aria-label="Formulario de inicio de sesión" autocomplete="on" method="post" action="/submit_login">
+        <img src="../imgs/logo+nombre_transparente.png" alt="Logo" id="logo_img">
+        <input type="email" name="email" id="email_box" placeholder="Correo electrónico" required>
+        <input type="password" name="password" id="password_box" placeholder="Contraseña" required>
+        <input type="button" value="Iniciar sesión" id="login_button">
+      </form>
     </main>
 
     <footer>
