@@ -8,56 +8,22 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/style_home.css">
-  <link rel="icon" href="imgs/logo_transparente.png" type="icon">
+  <link rel="stylesheet" href="../styles/style_login.css">
+  <link rel="icon" href="../imgs/logo_transparente.png" type="icon">
 </head>
 <body>
   <div id="preloader" aria-live="polite" aria-busy="true">
-    <img class="preloader__img" src="imgs/logo+nombre_transparente.png" alt="Reserva de Asgard">
+    <img class="preloader__img" src="../imgs/logo+nombre_transparente.png" alt="Reserva de Asgard">
   </div>
-  <header>
-    <div class="brand">
-      <div class="logo glow">
-        <img src="imgs/logo_transparente.png" alt="Logo">
-      </div>
-      <h1>Reserva de Asgard</h1>
-    </div>
-    <div id="buttons">
-      <div id="login" class="glow">
-        <a href="" id="link_login"><img src="imgs/logo_login.png" alt="logo_login" id="logo_login"></a>
-      </div>
-      <div id="cart-icon" class="glow">
-        🛒 <span id="cart-count">0</span>
-      </div>
-      <div id="menu-icon" class="glow">
-        <img src="imgs/icono_menu.png" alt="Icono de menú">
-      </div>
-    </div>
-  </header>
+
   <div class="container">
+    <header>
+      <img src="../imgs/logo+nombre_transparente.png" alt="Logo" id="logo_img">
+    </header>
+
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="intro">
-          <div class="eyebrow">Hidromiel artesana</div>
-          <h2 id="hero-title" class="title">Fine Nordic Mead</h2>
-          <p class="subtitle">El néctar de los dioses, elaborado con tradición, miel pura y sabores inspirados en la
-            nobleza nórdica. Ideal para regalos, celebraciones y para quienes aprecian una bebida con historia.</p>
-
-          <a class="btn" href="src/productos.html#p2">Comprar ahora</a>
-        </div>
-
-        <aside class="hero-art" aria-label="Ilustración: guerrero nórdico y botella de hidromiel">
-          <div>
-            <div class="bottle" aria-hidden="true">
-              <img src="imgs/guerrero.png" alt="Guerrero nórdico y botella de hidromiel">
-            </div>
-            <div>
-              <h3>Edición Noble</h3>
-              <p>Botella de 750ml — madurada en barrica</p>
-            </div>
-          </div>
-        </aside>
+      <section id="login_section">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi voluptate quis sed veritatis unde dolor delectus atque placeat a, cum quasi doloremque nisi cumque suscipit minima recusandae autem ea soluta dicta qui! Recusandae beatae enim optio? Eum nulla sunt aliquid, rerum odio, repellendus deleniti ad velit molestias doloremque totam.
       </section>
     </main>
 
@@ -66,33 +32,7 @@
       <div>Diseñado con inspiración nórdica • <span class="highlight">Envíos a toda Europa</span></div>
     </footer>
   </div>
-  <!-- Menú lateral de navegación -->
-  <aside id="sideMenu" class="glow">
-    <div id="iconMenuClose" class="glow">
-      <img src="imgs/x_menus.png" alt="Icono de menú">
-    </div>
-    <a href="">Inicio</a>
-    <a href="src/productos.html">Tienda</a>
-    <a href="#contact">Contacto</a>
-    <a href="src/nosotros.html">Sobre nosotros</a>
-  </aside>
-  <!-- Menú lateral de compra -->
-  <aside id="cart-panel" class="glow">
-    <div id="top_cart">
-      <h3>Tu Carrito</h3>
-      <div id="iconCartClose" class="glow">
-        <img src="imgs/x_menus.png" alt="Icono de menú">
-      </div>
-    </div>
-    <div id="cart-items"></div>
-    <div id="bottom_cart">
-      <div id="cart-total">Total: 0€</div>
-      <button id="clear-cart">Vaciar carrito</button>
-      <button id="buy-now">Comprar ahora</button>
-    </div>
-  </aside>
-  <script src="js/sideMenuScript.js"></script>
-  <script src="js/preloader.js"></script>
-  <script src="js/cartScript.js"></script>
+  <script src="../js/preloader.js"></script>
+  <script src="../js/cartScript.js"></script>
 </body>
 </html>
