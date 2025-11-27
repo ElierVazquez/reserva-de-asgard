@@ -56,7 +56,7 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   margin-bottom: 32px;
-  width: 50vw;
+  width: 500px;
   align-items: center;
 }
 
